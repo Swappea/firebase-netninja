@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>Cloud Cafe</h1>
+
+    <div class="content">
+
+        <form id="add-cafe-form">
+            <input type="text" name="name" placeholder="Cafe name">
+            <input type="text" name="city" placeholder="Cafe city">
+            <button>Add Cafe</button>
+        </form>
+        <input type="text" id="search" name="search" placeholder="Search based on City">
+
+        <ul id="cafe-list"></ul>
+
+    </div>
+
+
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBWExvSS8pTi9cmh-7o42ejt8J54DNv2fc",
+            authDomain: "fir-tutorial-acece.firebaseapp.com",
+            databaseURL: "https://fir-tutorial-acece.firebaseio.com",
+            projectId: "fir-tutorial-acece",
+            storageBucket: "fir-tutorial-acece.appspot.com",
+            messagingSenderId: "927150920042",
+            appId: "1:927150920042:web:248295d243c415cbe01513"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // store reference to our database
+        const db = firebase.firestore(); 
+
+        // db.settings({ timestampsInSnapshots: true }); -- this is no longer required
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
